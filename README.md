@@ -1,5 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/github/BizTalkComponents/setproperty?branch=master)](https://ci.appveyor.com/api/projects/status/github/BizTalkComponents/setproperty/branch/master)
-
+[![Build status](https://ibizsolutions.visualstudio.com/BizTalkComponents/_apis/build/status/SetProperty)](https://ibizsolutions.visualstudio.com/BizTalkComponents/_build/latest?definitionId=559)
 ##Description
 Promotes a specified value to a specified property.
 

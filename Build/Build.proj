@@ -1,17 +1,17 @@
 <Project DefaultTargets="GenerateMsi" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(MSBuildExtensionsPath)\BtsMsiTask\BtsMsiTask.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+	<Import Project="$(MSBuildExtensionsPath1)\BtsMsiTask\BtsMsiTask.targets" />
+  <Import Project="$(MSBuildExtensionsPath1)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
   
 	<PropertyGroup>
 		<DestinationPath>.</DestinationPath>
 		<ApplicationName>BizTalkComponents.PipelineComponents.SetProperty</ApplicationName>
 	</PropertyGroup>
 	<ItemGroup>
-		<Resource Include="..\Src\SetProperty\bin\Debug\BizTalkComponents.PipelineComponents.SetProperty.dll" />
+		<Resource Include="..\Src\SetProperty\bin\$(BuildConfiguration)\BizTalkComponents.PipelineComponents.SetProperty.dll" />
 	</ItemGroup>
 
   <Target Name="GetVersion">
-    <MSBuild.ExtensionPack.Framework.Assembly TaskAction="GetInfo" NetAssembly="..\Src\SetProperty\bin\Debug\BizTalkComponents.PipelineComponents.SetProperty.dll">
+    <MSBuild.ExtensionPack.Framework.Assembly TaskAction="GetInfo" NetAssembly="..\Src\SetProperty\bin\$(BuildConfiguration)\BizTalkComponents.PipelineComponents.SetProperty.dll">
       <Output TaskParameter="OutputItems" ItemName="Info"/>
     </MSBuild.ExtensionPack.Framework.Assembly>
   </Target>
